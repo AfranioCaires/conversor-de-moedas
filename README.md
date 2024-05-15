@@ -1,4 +1,7 @@
 # Conversor de Moedas
+ <p align="center">
+    <img src="./.github/Badge-Conversor.png" alt="Calculadora de Conversão de Moedas">
+  </p>
 
 ## Sobre o projeto
 
