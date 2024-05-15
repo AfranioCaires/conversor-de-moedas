@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abed7c7d-c72f-4910-89c1-5dd51f4a74d3" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/conversorDeMoedas/classes/API.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/conversorDeMoedas/classes/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/alura/conversorDeMoedas/classes/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conversorDeMoedas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/conversorDeMoedas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="abed7c7d-c72f-4910-89c1-5dd51f4a74d3" name="Changes" comment="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,34 +21,48 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2gQKi3HP3Ybx9ZLTTdn9BHYXS65" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pichau/Downloads/gson-2.10.1.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pichau/Downloads/gson-2.10.1.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="conversorDeMoedas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715624487582</updated>
       <workItem from="1715624488710" duration="8825000" />
+      <workItem from="1715797531401" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -81,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715624674125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature.">
+      <option name="closed" value="true" />
+      <created>1715798027320</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715798027320</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature." />
   </component>
 </project>

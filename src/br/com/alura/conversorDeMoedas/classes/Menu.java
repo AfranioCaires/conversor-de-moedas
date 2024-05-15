@@ -3,14 +3,10 @@ package br.com.alura.conversorDeMoedas.classes;
 import java.util.Scanner;
 
 public class Menu {
-    public void showMenu() {
+    public  static void showMenu() {
         Scanner scanner = new Scanner(System.in);
 
-        API api = new API("API_KEY");
-
-        Currency dollar = api.resquetCurrency("USD");
-        Currency euro = api.resquetCurrency("EUR");
-        Currency real = api.resquetCurrency("BRL");
+        Exchanger exchanger = new Exchanger("c5c4cb2086e7d90a897300f7");
 
         int controller = 0;
 
@@ -25,56 +21,49 @@ public class Menu {
             System.out.println("7) Sair");
 
             controller = scanner.nextInt();
+            double inputVale;
 
             switch (controller) {
                 case 1: {
-                    System.out.println("Digite o valor em dólar que queira converter para real:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * dollar.conversion_rates().get("BRL");
-                    System.out.println("*********************************************");
-                    System.out.println("$" + value + " -> R$ " + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em dólar que queira converter em real: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("USD", "BRL", inputVale);
                     break;
                 }
                 case 2: {
-                    System.out.println("Digite o valor em real que queira converter para dólar:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * real.conversion_rates().get("USD");
-                    System.out.println("*********************************************" + '\n');
-                    System.out.println("\n R$" + value + " -> $" + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em real que queira converter em dólar: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("BRL", "USD", inputVale);
                     break;
                 }
                 case 3: {
-                    System.out.println("Digite o valor em Euro que queira converter para real:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * euro.conversion_rates().get("BRL");
-                    System.out.println("*********************************************");
-                    System.out.println("€" + value + " -> R$ " + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em euro que queira converter em real: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("EUR", "BRL", inputVale);
                     break;
                 }
                 case 4: {
-                    System.out.println("Digite o valor em real que queira converter para euro:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * real.conversion_rates().get("EUR");
-                    System.out.println("*********************************************");
-                    System.out.println("R$" + value + " -> € " + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em real que queira converter em euro: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("BRL", "EUR", inputVale);
                     break;
                 }
                 case 5: {
-                    System.out.println("Digite o valor em dólar que queira converter para euro:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * dollar.conversion_rates().get("EUR");
-                    System.out.println("*********************************************");
-                    System.out.println("$" + value + " -> € " + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em dólar que queira converter em euro: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("USD", "EUR", inputVale);
                     break;
                 }
                 case 6: {
-                    System.out.println("Digite o valor em euro que queira converter para dólar:");
-                    double value = scanner.nextDouble();
-                    double exchangedValue = value * euro.conversion_rates().get("USD");
-                    System.out.println("*********************************************");
-                    System.out.println("€" + value + " -> $ " + String.format("%.2f", exchangedValue));
+                    System.out.println("Digite o valor em euro que queira converter em dólar: ");
+                    inputVale = scanner.nextDouble();
+                    exchanger.exchange("EUR", "USD", inputVale);
                     break;
                 }
+                case 7: {
+                    break;
+                }
+
                 default:
                     System.out.println("Opção inválida");
             }
