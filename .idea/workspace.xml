@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abed7c7d-c72f-4910-89c1-5dd51f4a74d3" name="Changes" comment="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature." />
+    <list default="true" id="abed7c7d-c72f-4910-89c1-5dd51f4a74d3" name="Changes" comment="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/alura/conversorDeMoedas/classes/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/alura/conversorDeMoedas/classes/Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715624487582</updated>
       <workItem from="1715624488710" duration="8825000" />
-      <workItem from="1715797531401" duration="530000" />
+      <workItem from="1715797531401" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -97,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715798027320</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactor: Include Exchanger class and InvalidCurrencyException&#10;&#10;This commit refactors the currency conversion functionality by introducing the Exchanger class. The Exchanger class encapsulates the logic for converting currency, taking into account the base currency, target currency, and the amount to be converted. Additionally, an InvalidCurrencyException is included to handle cases where invalid currency codes are provided.&#10;&#10;During this refactor, the following changes were made:&#10;- Addition of Exchanger class to manage currency conversion&#10;- Implementation of InvalidCurrencyException to handle invalid currency codes&#10;- Refactoring existing code to utilize the Exchanger class for currency conversion&#10;&#10;These changes improve the codebase by enhancing modularity and introducing proper exception handling, thereby increasing the robustness of the currency conversion feature.">
+      <option name="closed" value="true" />
+      <created>1715798220523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715798220523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
